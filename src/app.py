@@ -10,6 +10,10 @@ def hello():
 def health():
     return {"status": "healthy"}
 
+@app.route('/version')
+def version():
+    return {"version": "1.0.0", "status": "running"}
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
  
